@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>login page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main">
+         <div class="box">
+                 <div class="button" >
+                    <div id="btn" > </div>
+                      <button type="button" class="upper" onclick="mentors()">Mentor</button>
+                      <button type="button" class="upper" onclick="students()">Student</button>
+                </div>
+                <form id="mentor" class="input"  action="connect.php" method="post">
+                  <input type="email" class="input-field" required  placeholder="Mentor email" name="email"/>
+                  <input type="password" class="input-field" required  placeholder="Mentor password" name="password"/>
+                  <input type="checkbox" class="check-box"><span class="check-box"> Remember password </span>
+                  <button type="submit" class="submit">Log in</button>
+                </form>
+                <form id="student" class="input">
+                  <input type="email" class="input-field" required  placeholder="Student email"/>
+                  <input type="text" class="input-field" required  placeholder="Student password" />
+                  <input type="checkbox" class="check-box"><span class="check-box"> Remember password </span>
+                  <button type="submit" class="submit">Log in</button>
+                </form>
+        </div>
+   </div>
+   <script>
+     var x = document.getElementById("mentor");
+      var y = document.getElementById("student");
+      var z = document.getElementById("btn");
+
+    function students(){
+               x.style.left = "-400px";
+                y.style.left = "20px";
+                 z.style.left = "110px";
+     }
+     function mentors(){
+                x.style.left = "20px";
+                 y.style.left = "450px";
+                  z.style.left = "0px";
+  }
+
+   </script>
+
+</body>
+</html>
